@@ -51,7 +51,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #footer {
   background-color: #444;
-  color: #aaa;
+  color: #fff;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -113,11 +113,12 @@ nav h1 a {
   width: 100%;
   background-color: #ccc;
 }
+
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
   height: 100%;
-  background-color: #3397DB;
+  background-color: #1c4792;
   align-items: center;
 	padding-top: 12px;
 }
@@ -172,7 +173,7 @@ nav h1 a {
   min-width: 100%;
 }
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #1c4792;
   font-family: Arial,sans-serif;
   font-size: 14pt;
   font-weight: 200;
@@ -185,8 +186,8 @@ nav h1 a {
   margin: 0;
   font-size: 11pt;
 }
-#restaurants-list li a {
-  background-color: orange;
+#restaurants-list li button {
+  background-color: #0000FF;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
@@ -238,7 +239,7 @@ nav h1 a {
   width: 100%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: #1c4792;
   font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 200;
@@ -325,6 +326,55 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+
+/* ====================== A11y ====================== */
+.screen-reader {
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.skip-link {
+	position: absolute;
+	top: -60px;
+	left: 0;
+	background: #1c4792;
+	color: white;
+	font-weight: bold;
+	padding: 15px;
+	z-index: 100;
+}
+.skip-link:focus {
+	top: 0;
+}
+
+.aria-label {
+  display: none;
+}
+
+select:hover,
+select:focus,
+button:hover,
+button:focus,
+a:hover,
+a:focus {
+  outline: 5px solid #eb8111;;
+}
+
+select:hover,
+select:focus,
+button:hover,
+button:focus,
+a:hover,
+a:focus {
+	text-decoration: underline;
+  box-shadow: 0 2px 2px 0 rgba(255, 50, 0, .14),
+              0 3px 1px -2px rgba(255, 50, 0, .2),
+              0 1px 5px 0 rgba(255, 50, 0, .12);
 }
 
 /* ====================== Media Queries ====================== */
